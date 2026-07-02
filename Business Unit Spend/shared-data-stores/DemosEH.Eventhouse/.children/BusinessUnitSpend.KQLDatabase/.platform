@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDatabase",
+    "displayName": "BusinessUnitSpend",
+    "description": "BusinessUnitSpend"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fe0a563d-32ab-a1ea-41ab-1f3c9e614e22"
+  }
+}
