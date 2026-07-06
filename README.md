@@ -1,7 +1,7 @@
 
-Step 1: Login to Microsoft Fabric, using your allocated team username and password.
+Step 1: Login to Microsoft Fabric, [******** ](https://app.powerbi.com/) using your allocated team username and password.
 
-Step 2: Navigate to your assigned workspace
+Step 2: Navigate to your assigned workspace which is the same as your login number.
 
 **LAB 01: Data Streams**
 
@@ -56,7 +56,7 @@ Next we create a real time dashboard, the sky is the limit on this and use the c
 https://github.com/user-attachments/assets/4ecd51e9-f95b-41e0-9c3e-e0ff54e24077
 
 
-LAB 03: Build a Lakehouse
+**LAB 03: Build a Lakehouse**
 
 Step 1: Create a new folder called Lab 03 - Lakehouse. 
 
@@ -70,6 +70,19 @@ https://github.com/user-attachments/assets/315bc298-18aa-41af-b21a-e5b45a5a2290
 
 Once completed Navigate to your new Lakehouse with the newly created tables. From here you can now create semantic models, query the data, create reports or build data agents.
 
+https://github.com/user-attachments/assets/df2207bc-8561-4086-a3dd-318969750d02
+
+**LAB 04: Create a Data Agent**
+
+Step 1: Create a folder called Lab 04 - Data Agent, and select new item to create a data agent. Give the agent any name you wish. Once created add the lakehouse created in the last lab to your agent.
+
+https://github.com/user-attachments/assets/615f70fd-035d-4a2a-a2d5-4677459cc8ae
+
+Select all the tables from your source, head to setup and give your agent some instructions. Click Add tools and select code interpreter.
+
+https://github.com/user-attachments/assets/a84a3313-77f4-47e7-9189-faba8d66c220
+
+Now ask your agent any questions to test it out, ask the agent to create a bar graph or pie chart.
 
 
 
