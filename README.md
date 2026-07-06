@@ -93,5 +93,7 @@ https://github.com/user-attachments/assets/a84a3313-77f4-47e7-9189-faba8d66c220
 
 Now ask your agent any questions to test it out, ask the agent to create a bar graph or pie chart. Dont forget to Publish your changes.
 
+https://github.com/user-attachments/assets/1ad953a1-8375-4df2-a176-7b3c24353d09
+
 
 
