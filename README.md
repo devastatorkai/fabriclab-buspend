@@ -1,5 +1,5 @@
 
-Step 1: Login to Microsoft Fabric, [******** ](https://app.powerbi.com/) using your allocated team username and password.
+Step 1: Login to Microsoft Fabric, (https://app.powerbi.com/) using your allocated team username and password.
 
 Step 2: Navigate to your assigned workspace which is the same as your login number.
 
