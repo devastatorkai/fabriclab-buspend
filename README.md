@@ -55,6 +55,15 @@ Next we create a real time dashboard, the sky is the limit on this and use the c
 
 https://github.com/user-attachments/assets/4ecd51e9-f95b-41e0-9c3e-e0ff54e24077
 
+Step 3: Using Activator
+
+Create a new folder Lab 02 - Real Time. Go back to the Event Stream you created in Lab 1. And click on Set Alert in the menu bar. 
+
+https://github.com/user-attachments/assets/e7df3ae4-6e79-492f-a652-b1c4bb055a9c
+
+Fill in all the required information and click on Create. Once Created click on the Open button and check your Data Activator at work.
+
+https://github.com/user-attachments/assets/d7af9bbe-fdd5-46fe-8d26-685993ff34fb
 
 **LAB 03: Build a Lakehouse**
 
@@ -82,7 +91,7 @@ Select all the tables from your source, head to setup and give your agent some i
 
 https://github.com/user-attachments/assets/a84a3313-77f4-47e7-9189-faba8d66c220
 
-Now ask your agent any questions to test it out, ask the agent to create a bar graph or pie chart.
+Now ask your agent any questions to test it out, ask the agent to create a bar graph or pie chart. Dont forget to Publish your changes.
 
 
 
