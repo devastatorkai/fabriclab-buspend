@@ -37,9 +37,25 @@ First go to the Event Stream and click on refresh to ensure you getting events s
 
 https://github.com/user-attachments/assets/93a008ef-61f2-40e7-927e-b89d671d65fe
 
-Next Add the EventHouse as a destination and create it. You can name the table BUSpend or anything you would like. Once done Publish your changes.
+Next Add the EventHouse as a destination and create it. You can name the table BUSpend or anything you would like. Once done **Publish** your changes.
 
 https://github.com/user-attachments/assets/486480bf-c580-460a-b1fe-7dc2d846c2e8
+
+**LAB 02: Creating a Real-time Dashboard**
+
+Step 1: Navigating the Event House
+
+Find the newly created eventhouse in your workspace and open it up, click on the KQL database the the table you created, navigate around the database and check the data stream coming in.
+
+https://github.com/user-attachments/assets/84917717-047d-43e4-8917-8f1a7b0fa253
+
+Step 2: Creating a Real-time Dashboard
+
+Next we create a real time dashboard, the sky is the limit on this and use the copilot if you dont know how to write KQL statements.
+
+https://github.com/user-attachments/assets/4ecd51e9-f95b-41e0-9c3e-e0ff54e24077
+
+
 
 
 
