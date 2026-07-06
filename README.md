@@ -64,9 +64,9 @@ Download the LakehouseLoader Notebook. And upload it to Fabric Workspace. This n
 
 https://github.com/user-attachments/assets/6bc28a04-be47-4295-a1f0-648d65fc7588
 
-Just click the Run all Button and wait for the notebook to complete.
+Run the 1st Cell to Create the lakehouse then attach that lakehouse to the current notebook before running the next cell.
 
-https://github.com/user-attachments/assets/51b7a8e5-3d13-41d4-a129-447dfcd1612a
+https://github.com/user-attachments/assets/315bc298-18aa-41af-b21a-e5b45a5a2290
 
 Once completed Navigate to your new Lakehouse with the newly created tables. From here you can now create semantic models, query the data, create reports or build data agents.
 
