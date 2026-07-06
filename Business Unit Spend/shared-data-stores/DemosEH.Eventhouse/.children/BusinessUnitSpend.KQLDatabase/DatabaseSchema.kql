@@ -1,5 +1,0 @@
-// KQL script
-// Use management commands in this script to configure your database items, such as tables, functions, materialized views, and more.
-
-
-.create-merge table BUSpend (event_id:string, timestamp:string, ingest_hostname:string, business_unit:string, cost_center:string, spend_category:string, currency:string, fiscal_period:string, budget_amount:long, transaction_amount:real, cumulative_spend:real, is_over_budget:bool, variance_amount:real, variance_pct:real, alert_level:string, alert_reasons:dynamic) 
