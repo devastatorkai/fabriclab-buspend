@@ -1,0 +1,66 @@
+table dimcloudaccount
+	lineageTag: 16c37d82-53df-4bd5-998c-211cbd6fd2a1
+	sourceLineageTag: [dbo].[dimcloudaccount]
+
+	column CloudAccountKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1c98b35b-256a-455a-946f-9ea05b79e106
+		sourceLineageTag: CloudAccountKey
+		summarizeBy: none
+		sourceColumn: CloudAccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CloudProviderKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 03944fbb-1a1e-4bd3-8ffc-b8516399f892
+		sourceLineageTag: CloudProviderKey
+		summarizeBy: none
+		sourceColumn: CloudProviderKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column OwningDepartmentKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 442a20ef-3ee3-4c9f-a772-726d7dbdc833
+		sourceLineageTag: OwningDepartmentKey
+		summarizeBy: count
+		sourceColumn: OwningDepartmentKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountIdentifier
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 211e52b6-2f25-42bb-a8da-1b22c58464b9
+		sourceLineageTag: AccountIdentifier
+		summarizeBy: none
+		sourceColumn: AccountIdentifier
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountDescription
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a44432c8-31da-428f-867d-d5ec06f67ac5
+		sourceLineageTag: AccountDescription
+		summarizeBy: none
+		sourceColumn: AccountDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimcloudaccount = entity
+		mode: directLake
+		source
+			entityName: dimcloudaccount
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

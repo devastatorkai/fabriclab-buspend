@@ -1,0 +1,145 @@
+[
+  {
+    "uniqueIdentifier": "1152fb0d-5470-4566-8f75-252989a4ed29",
+    "payload": {
+      "name": "BUSpendStream",
+      "description": "Container Description",
+      "type": "eventstreams"
+    },
+    "type": "container-v1"
+  },
+  {
+    "uniqueIdentifier": "b3d06e3c-a6ec-5b07-bd46-9e0fdc3f7b08",
+    "payload": {
+      "name": "BankingLoanFraudStream-stream event",
+      "metadata": {
+        "eventstreamArtifactId": "cfcc69d6-324d-413f-b724-35416b128d3b",
+        "eventTypes": [
+          {
+            "name": "BUSpendStream"
+          }
+        ]
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "1152fb0d-5470-4566-8f75-252989a4ed29"
+      }
+    },
+    "type": "eventstreamSource-v1"
+  },
+  {
+    "uniqueIdentifier": "cce76ab7-18a9-488c-87ab-70f07a93d9d2",
+    "payload": {
+      "name": "BankingLoanFraudStream-stream event",
+      "parentContainer": {
+        "targetUniqueIdentifier": "1152fb0d-5470-4566-8f75-252989a4ed29"
+      },
+      "definition": {
+        "type": "Event",
+        "instance": "{\"steps\":[{\"id\":\"fe30c879-eb5d-4a64-9f38-21d7fabafa80\",\"name\":\"SourceEventStep\",\"rows\":[{\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"b3d06e3c-a6ec-5b07-bd46-9e0fdc3f7b08\"}],\"kind\":\"SourceReference\",\"name\":\"SourceSelector\"}]}],\"templateId\":\"SourceEvent\",\"templateVersion\":\"1.2.6\"}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "c0eade53-6c8f-42c6-9d06-141bfc2004a6",
+    "payload": {
+      "name": "business_unit",
+      "parentContainer": {
+        "targetUniqueIdentifier": "1152fb0d-5470-4566-8f75-252989a4ed29"
+      },
+      "definition": {
+        "type": "Object"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "1d15dccc-2bd4-4779-acf3-8c644f2bcf8f",
+    "payload": {
+      "name": "business_unit",
+      "parentObject": {
+        "targetUniqueIdentifier": "c0eade53-6c8f-42c6-9d06-141bfc2004a6"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "1152fb0d-5470-4566-8f75-252989a4ed29"
+      },
+      "definition": {
+        "type": "Attribute",
+        "instance": "{\"steps\":[{\"id\":\"e6a1425c-f09b-409f-acda-7ee36e2bee15\",\"name\":\"IdPartStep\",\"rows\":[{\"arguments\":[{\"name\":\"op\",\"type\":\"string\",\"value\":\"Text\"},{\"name\":\"format\",\"type\":\"string\",\"value\":\"\"}],\"kind\":\"TypeAssertion\",\"name\":\"TypeAssertion\"}]}],\"templateId\":\"IdentityPartAttribute\",\"templateVersion\":\"1.2.6\"}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "248328da-771b-4eea-9fdf-f03768179a05",
+    "payload": {
+      "name": "business_unit",
+      "parentObject": {
+        "targetUniqueIdentifier": "c0eade53-6c8f-42c6-9d06-141bfc2004a6"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "1152fb0d-5470-4566-8f75-252989a4ed29"
+      },
+      "definition": {
+        "type": "Attribute",
+        "instance": "{\"steps\":[{\"id\":\"5f14b109-2d40-4f66-95f4-74f3ca07a3ad\",\"name\":\"IdStructureStep\",\"rows\":[{\"arguments\":[{\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"1d15dccc-2bd4-4779-acf3-8c644f2bcf8f\"}],\"kind\":\"AttributeReference\",\"name\":\"idPart\",\"type\":\"complex\"}],\"kind\":\"IdPart\",\"name\":\"IdPart\"}]}],\"templateId\":\"IdentityTupleAttribute\",\"templateVersion\":\"1.2.6\"}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "1f016d92-9fa2-4205-a103-d47b005c6fe6",
+    "payload": {
+      "name": "BankingLoanFraudStream-stream event",
+      "parentObject": {
+        "targetUniqueIdentifier": "c0eade53-6c8f-42c6-9d06-141bfc2004a6"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "1152fb0d-5470-4566-8f75-252989a4ed29"
+      },
+      "definition": {
+        "type": "Event",
+        "instance": "{\"steps\":[{\"id\":\"31201199-67cc-42c1-9a39-54e7643c0160\",\"name\":\"SplitEventStep\",\"rows\":[{\"arguments\":[{\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"cce76ab7-18a9-488c-87ab-70f07a93d9d2\"}],\"kind\":\"EventReference\",\"name\":\"event\",\"type\":\"complex\"}],\"kind\":\"Event\",\"name\":\"EventSelector\"},{\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"business_unit\"},{\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"1d15dccc-2bd4-4779-acf3-8c644f2bcf8f\"}],\"kind\":\"AttributeReference\",\"name\":\"idPart\",\"type\":\"complex\"}],\"kind\":\"FieldIdMapping\",\"name\":\"FieldIdMapping\"},{\"arguments\":[{\"name\":\"isAuthoritative\",\"type\":\"boolean\",\"value\":true}],\"kind\":\"EventOptions\",\"name\":\"SplitEventOptions\"}]}],\"templateId\":\"SplitEvent\",\"templateVersion\":\"1.2.6\"}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "7c1a09ad-79dd-473e-9797-d3e9c82d13f8",
+    "payload": {
+      "name": "variance_amount",
+      "parentObject": {
+        "targetUniqueIdentifier": "c0eade53-6c8f-42c6-9d06-141bfc2004a6"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "1152fb0d-5470-4566-8f75-252989a4ed29"
+      },
+      "definition": {
+        "type": "Attribute",
+        "instance": "{\"steps\":[{\"id\":\"b5d30086-d05a-457d-baa6-02b5d20fd9e0\",\"name\":\"EventSelectStep\",\"rows\":[{\"arguments\":[{\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"1f016d92-9fa2-4205-a103-d47b005c6fe6\"}],\"kind\":\"EventReference\",\"name\":\"event\",\"type\":\"complex\"}],\"kind\":\"Event\",\"name\":\"EventSelector\"},{\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"variance_amount\"}],\"kind\":\"EventField\",\"name\":\"EventFieldSelector\"}]},{\"id\":\"fc33f333-e2be-4c4b-87da-bd75d603d8a3\",\"name\":\"EventComputeStep\",\"rows\":[{\"arguments\":[{\"name\":\"op\",\"type\":\"string\",\"value\":\"Text\"},{\"name\":\"format\",\"type\":\"string\",\"value\":\"\"}],\"kind\":\"TypeAssertion\",\"name\":\"TypeAssertion\"}]}],\"templateId\":\"BasicEventAttribute\",\"templateVersion\":\"1.2.6\"}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "1917a084-ce97-43c6-bd98-b76efd5d699e",
+    "payload": {
+      "name": "Over Limit",
+      "parentObject": {
+        "targetUniqueIdentifier": "c0eade53-6c8f-42c6-9d06-141bfc2004a6"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "1152fb0d-5470-4566-8f75-252989a4ed29"
+      },
+      "definition": {
+        "type": "Rule",
+        "instance": "{\"templateId\":\"AttributeTrigger\",\"templateVersion\":\"1.2.6\",\"steps\":[{\"name\":\"ScalarSelectStep\",\"id\":\"bd3f1edc-5362-402a-8a66-cd7ad0bdb2ca\",\"rows\":[{\"name\":\"AttributeSelector\",\"kind\":\"Attribute\",\"arguments\":[{\"kind\":\"AttributeReference\",\"type\":\"complex\",\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"7c1a09ad-79dd-473e-9797-d3e9c82d13f8\"}],\"name\":\"attribute\"}]}]},{\"name\":\"ScalarDetectStep\",\"id\":\"bd3c4288-1ee6-472d-90f1-4b86dd79cecf\",\"rows\":[{\"name\":\"NumberChanges\",\"kind\":\"NumberChanges\",\"arguments\":[{\"name\":\"op\",\"type\":\"string\",\"value\":\"ChangesFrom\"},{\"name\":\"value\",\"type\":\"number\",\"value\":0.0}]},{\"name\":\"OccurrenceOption\",\"kind\":\"EachTime\",\"arguments\":[]}]},{\"name\":\"ActStep\",\"id\":\"6e21ae22-5834-483a-9b3c-8c964c9e21b3\",\"rows\":[{\"name\":\"TeamsBinding\",\"kind\":\"TeamsMessage\",\"arguments\":[{\"name\":\"messageLocale\",\"type\":\"string\",\"value\":\"en-us\"},{\"name\":\"recipients\",\"type\":\"array\",\"values\":[{\"type\":\"string\",\"value\":\"Kaidan@MngEnvMCAP053308.onmicrosoft.com\"}]},{\"name\":\"headline\",\"type\":\"array\",\"values\":[{\"type\":\"string\",\"value\":\"Activator alert\"}]},{\"name\":\"optionalMessage\",\"type\":\"array\",\"values\":[{\"type\":\"string\",\"value\":\"The condition has been met\"}]},{\"name\":\"additionalInformation\",\"type\":\"array\",\"values\":[]}]}]}]}",
+        "settings": {
+          "shouldRun": false,
+          "shouldApplyRuleOnUpdate": false
+        }
+      }
+    },
+    "type": "timeSeriesView-v1"
+  }
+]

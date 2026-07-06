@@ -1,0 +1,36 @@
+relationship e75a47d4-b2c0-b96a-287f-0296d4967afb
+	fromColumn: factcloudspend.ProjectKey
+	toColumn: dimproject.ProjectKey
+
+relationship c60b98d7-9690-8b45-588b-b168e365fb80
+	fromColumn: dimcostcenter.CostCenterKey
+	toColumn: dimproject.PrimaryCostCenterKey
+
+relationship 18221385-ec5d-cc6b-eedb-d2a34100dd72
+	fromColumn: factcloudspend.CloudServiceKey
+	toColumn: dimcloudservice.CloudServiceKey
+
+relationship c4767f33-0102-71cf-d23c-13d9595816f5
+	fromColumn: dimcostcenter.DepartmentKey
+	toColumn: dimdepartment.DepartmentKey
+
+relationship f8f4ea5c-06a3-7efa-73e3-149896392602
+	fromColumn: factcloudspend.CloudAccountKey
+	toColumn: dimcloudaccount.CloudAccountKey
+
+relationship 96a48ad0-9aed-94dd-cb59-5f9da78426af
+	fromColumn: dimcloudaccount.CloudProviderKey
+	toColumn: dimcloudprovider.CloudProviderKey
+
+relationship 9baec8f8-9a14-65c7-fdcd-d93d0d9d1262
+	fromColumn: factcloudspend.ChargebackOwnerKey
+	toColumn: dimchargebackowner.ChargebackOwnerKey
+
+relationship 389dc52b-aa94-0ca7-8411-ec18250e99bb
+	fromColumn: dimdepartment.BusinessUnitKey
+	toColumn: dimbusinessunit.BusinessUnitKey
+
+relationship c10fdbc7-cebc-b766-1887-aff6521ed441
+	fromColumn: factcloudspend.DateKey
+	toColumn: dimdate.DateKey
+

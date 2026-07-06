@@ -1,0 +1,102 @@
+table factcloudspend
+	lineageTag: f9d3227a-409b-4a69-82b1-0bbc5b5fda4d
+	sourceLineageTag: [dbo].[factcloudspend]
+
+	column CostCenterKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f175f300-5b6c-4f8a-9de9-8769408093fa
+		sourceLineageTag: CostCenterKey
+		summarizeBy: count
+		sourceColumn: CostCenterKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CloudAccountKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d8b65437-cccd-467f-80fc-a654403fabcb
+		sourceLineageTag: CloudAccountKey
+		summarizeBy: none
+		sourceColumn: CloudAccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CloudServiceKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4664642b-b288-49f7-8d77-977a7bd62c8e
+		sourceLineageTag: CloudServiceKey
+		summarizeBy: none
+		sourceColumn: CloudServiceKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: df6a6483-5c92-47f2-9096-8926f43bb2dc
+		sourceLineageTag: DateKey
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8db68a33-7296-486c-8201-20edea645f1f
+		sourceLineageTag: ProjectKey
+		summarizeBy: none
+		sourceColumn: ProjectKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChargebackOwnerKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 703adbf5-ff12-4bf9-af91-4dfb432749f1
+		sourceLineageTag: ChargebackOwnerKey
+		summarizeBy: none
+		sourceColumn: ChargebackOwnerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpendAmount
+		dataType: double
+		sourceProviderType: float
+		lineageTag: dd5c9b98-7964-480d-bbac-bc9d7ef2ebe5
+		sourceLineageTag: SpendAmount
+		summarizeBy: sum
+		sourceColumn: SpendAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FactCloudSpendKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 9406e67e-113a-404a-a454-88c4dc5a0004
+		sourceLineageTag: FactCloudSpendKey
+		summarizeBy: count
+		sourceColumn: FactCloudSpendKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition factcloudspend = entity
+		mode: directLake
+		source
+			entityName: factcloudspend
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

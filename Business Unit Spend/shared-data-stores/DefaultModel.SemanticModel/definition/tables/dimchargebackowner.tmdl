@@ -1,0 +1,54 @@
+table dimchargebackowner
+	lineageTag: bd5de63c-e605-483b-81c5-6ecc39a45819
+	sourceLineageTag: [dbo].[dimchargebackowner]
+
+	column ChargebackOwnerKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 12efacf5-dac3-4cab-8dce-6cd406e1d2fb
+		sourceLineageTag: ChargebackOwnerKey
+		summarizeBy: none
+		sourceColumn: ChargebackOwnerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChargebackOwnerName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6c22a4ba-111a-4c33-858c-0b70b5a3813a
+		sourceLineageTag: ChargebackOwnerName
+		summarizeBy: none
+		sourceColumn: ChargebackOwnerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column OwnerBusinessUnit
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 76d33327-1a3f-45fb-8c74-5a6b49b7e22c
+		sourceLineageTag: OwnerBusinessUnit
+		summarizeBy: none
+		sourceColumn: OwnerBusinessUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column OwnerRole
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 82dfb621-c861-416f-bd0a-0b4bc87d1fb0
+		sourceLineageTag: OwnerRole
+		summarizeBy: none
+		sourceColumn: OwnerRole
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimchargebackowner = entity
+		mode: directLake
+		source
+			entityName: dimchargebackowner
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

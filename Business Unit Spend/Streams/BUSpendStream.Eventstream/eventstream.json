@@ -9,6 +9,26 @@
   ],
   "destinations": [
     {
+      "id": "b3d06e3c-a6ec-5b07-bd46-9e0fdc3f7b08",
+      "name": "LXb9hoC6drrBRhI0rT3I6P-0c7eede8-05e8-43f2-b015-c0f6575dab57",
+      "type": "Activator",
+      "properties": {
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "575dab57-c0f6-b015-43f2-05e80c7eede8",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "BankingLoanFraudStream-stream"
+        }
+      ]
+    },
+    {
       "id": "eb5d8b37-4f8d-424e-a31b-172d0a830248",
       "name": "Eventhouse",
       "type": "Eventhouse",
