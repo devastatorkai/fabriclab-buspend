@@ -56,6 +56,20 @@ Next we create a real time dashboard, the sky is the limit on this and use the c
 https://github.com/user-attachments/assets/4ecd51e9-f95b-41e0-9c3e-e0ff54e24077
 
 
+LAB 03: Build a Lakehouse
+
+Step 1: Create a new folder called Lab 03 - Lakehouse. 
+
+Download the LakehouseLoader Notebook. And upload it to Fabric Workspace. This notebook contains code to create a new Lakehouse and build a few tables with sample data. 
+
+https://github.com/user-attachments/assets/6bc28a04-be47-4295-a1f0-648d65fc7588
+
+Just click the Run all Button and wait for the notebook to complete.
+
+https://github.com/user-attachments/assets/51b7a8e5-3d13-41d4-a129-447dfcd1612a
+
+Once completed Navigate to your new Lakehouse with the newly created tables. From here you can now create semantic models, query the data, create reports or build data agents.
+
 
 
 
